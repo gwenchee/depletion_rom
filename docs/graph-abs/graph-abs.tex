@@ -1,11 +1,7 @@
 \documentclass[review]{elsarticle}
 
-\usepackage{multirow}
 \usepackage{lineno}
 \usepackage{xspace}
-\usepackage{threeparttable}
-\usepackage{subfig}
-\newcommand{\CC}{C\nolinebreak\hspace{-.05em}\raisebox{.4ex}{\tiny\bf +}\nolinebreak\hspace{-.10em}\raisebox{.4ex}{\tiny\bf +} \xspace}
 \modulolinenumbers[5]
 
 \journal{Annals of Nuclear Energy}
@@ -20,15 +16,14 @@
 \usepackage{microtype} % improves typography for PDF
 \usepackage{hhline}
 \usepackage{amsmath}
-\usepackage{subfig}
 
-%\usepackage{graphicx}
+%\usepackage[demo]{graphicx}
 %\usepackage{caption}
 %\usepackage{subcaption}
 
 \usepackage{booktabs}
 \usepackage{threeparttable, tablefootnote}
-\graphicspath{ {../images/} {../images/isos/} {../images/err/}  }
+
 \usepackage{tabularx}
 \newcolumntype{b}{>{\hsize=1.0\hsize}X}
 \newcolumntype{s}{>{\hsize=.5\hsize}X}
@@ -37,6 +32,7 @@
 
 \newcommand{\Cyclus}{\textsc{Cyclus}\xspace}%
 \newcommand{\Cycamore}{\textsc{Cycamore}\xspace}%
+\graphicspath{ {../../images/} }
 
 % tikz %
 \usepackage{tikz}
@@ -49,49 +45,28 @@
 
 % hyperref %
 \usepackage[hidelinks]{hyperref}
-% after hyperref %
-\usepackage{cleveref}
-\usepackage{datatool}
-\usepackage[acronym,toc]{glossaries}
-\include{acros}
-
-\makeglossaries
 
 \begin{document}
 \begin{frontmatter}
-\title{Deep Learning Approach to Nuclear Fuel Transmutation in a Fuel
-Cycle Simulator}
-
+\title{Graphical Abstract\\
+Deep Learning Approach to Nuclear Fuel Transmutation in a Fuel Cycle Simulator}
 \date{}                     %% if you don't need date to appear
 
-%% Authors
-\input{authors}
-
-% Institutes of the authors
-\input{institutions}
-
-\begin{keyword}
-nuclear fuel cycle \sep
-machine learning \sep
-artificial neural network \sep
-simulation \sep
-spent nuclear fuel
-\end{keyword}
-
-\input{abstract}
 \end{frontmatter}
-\glsresetall
 
-\linenumbers
-\input{introduction}
-\input{method}
-\input{result}
-\input{conclusion}
-\input{future_work}
-\input{acks}
-\pagebreak
-\section{References}
-\bibliography{bibliography}
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{assem_dh.png}
+    \caption{Relative error percentage for predicting the decay
+             heat of individual assemblies compared with
+             using a recipe for predicting depleted fuel
+             composition.}
+    \label{fig:assem_dh}
+\end{figure}
+
+
 
 
 \end{document}

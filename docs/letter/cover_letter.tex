@@ -1,0 +1,89 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Plain Cover Letter
+% LaTeX Template
+%
+% This template has been downloaded from:
+% http://www.latextemplates.com
+%
+% Original author:
+% Rensselaer Polytechnic Institute (http://www.rpi.edu/dept/arc/training/latex/resumes/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%       PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt]{letter} % Default font size of the document, change to 10pt to fit more text
+\usepackage{graphicx}
+%\usepackage{newcent} % Default font is the New Century Schoolbook PostScript font
+%\usepackage{helvet} % Uncomment this (while commenting the above line) to use the Helvetica font
+
+% Margins
+\usepackage[left=1.25in,right=1.25in,top=1in,bottom=0.5in]{geometry}
+%\let\raggedleft\raggedright % Pushes the date (at the top) to the left, comment this line to have the date on the right
+
+\usepackage{eso-pic,graphicx}
+ \begin{document}
+
+%----------------------------------------------------------------------------------------
+%       ADDRESSEE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{letter}{}
+
+%----------------------------------------------------------------------------------------
+%       YOUR NAME & ADDRESS SECTION
+%----------------------------------------------------------------------------------------
+
+\address{Jin Whan Bae\\
+nuclearbae@gmail.com\\
+1 Bethel Valley Rd.\\
+Oak Ridge, TN 37830}
+
+
+%----------------------------------------------------------------------------------------
+%       LETTER CONTENT SECTION
+%----------------------------------------------------------------------------------------
+
+\opening{Professor Sara A. Pozzi,}
+
+Please find enclosed a manuscript entitled: ``Deep Learning Approach to Nuclear Fuel Transmutation in a Fuel
+Cycle Simulator'' which I and my coauthors, Rykhlevskii, Chee, and Huff, 
+are submitting for exclusive consideration for publication as a research 
+article in Annals of Nuclear Energy.
+
+This manuscript demonstrates an effective use of neural network regression
+models to predict depleted fuel composition in a nuclear fuel cycle
+simulator. The paper describes the workflow in detail enough for this
+work to be reproduced.
+
+This work extends a previous concept of training a neural network to
+predict complex calculations, by quantifying the effects of using
+neural networks in a fuel cycle simulator. The field of system-level
+fuel cycle modeling has always tried to find a balance between
+fidelity, flexibility, and quick computation time. A well-designed
+neural network trained on data from high-fidelity calculations, can
+be utilized to model a fuel cycle facility, without a large
+computational burden. This workflow of using data from a complex
+modeling tool (e.g. SCALE) to train a neural network model 
+for implementation in a fuel cycle simulator, as demonstrated in
+this work, is promising.
+
+
+Thank you for your consideration of this work. I expect it will be of interest
+to a broad readership concerned with the nuclear fuel cycle, used
+nuclear fuel management, and applications of machine learning in nuclear engineering applications.  Please address correspondence concerning
+this manuscript to me at the Oak Ridge National Laboratory.
+
+\closing{Sincere regards,
+\fromsig{Jin Whan Bae\\Research Associate\\Oak Ridge National Laboratory\\nuclearbae@gmail.com}
+}
+
+%----------------------------------------------------------------------------------------
+
+\end{letter}
+
+\end{document}
+
+

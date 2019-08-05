@@ -15,12 +15,13 @@ We implemented this model in \Cyclus to provide a
 which can simulate potential future improvement scenarios
 in reactor operation.
 
-This work also shows that rapid, open-source depletion models
-can be implemented using prediction models, from
-complex depletion algorithms and
-datasets. \gls{NFC} simulators struggle to find a balance
-between fidelity and rapidity. Using high-fidelity
-models is prohibitively computationally expensive
+This work also shows that open-source depletion models
+that run quickly
+can be implemented using prediction models, trained
+with datasets from complex depletion algorithms.
+\gls{NFC} simulators struggle to find a balance
+between fidelity and rapidity. Using a high-fidelity
+model is prohibitively computationally expensive
 since \gls{NFC} simulators may need to run
 hundreds of depletion calculations for multiple
 facilities. On the other hand, using simpler methods
@@ -39,7 +40,7 @@ data
 and large in size. The pickled file that contains
 the model and data scaling objects is only 38.2 kB, meaning that it
 can be easily distributed and imported in external software, without
-revealing detailed information in the actual dataset.
+revealing detailed information about the actual dataset.
 
 An accessible, large-scale depletion database 
 like the \gls{UDB} are valuable
@@ -48,7 +49,5 @@ with the advancement of data science and machine learning.
 For the long-term advancement of the field, the
 community should encourage collection and storage of more
 data and simulation results in
-a central repository, for the betterment of the field.
-
-[cringeend]
+a central repository.
 

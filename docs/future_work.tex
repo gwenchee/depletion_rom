@@ -4,32 +4,19 @@ A trained model is only as good as the data it is trained on.
 This work can be improved and expanded by generating
 more comprehensive depletion data that covers a wider
 range of enrichment and burnup ranges. An automation
-script may run SCALE ORIGEN to perform depletion calculations
+script might run SCALE/ORIGEN to perform depletion calculations
 for a wide range of enrichment (e.g. 0.7 - 4.99 wt\%) and burnup (e.g. 0 - 80,000 MWd/MT),
 for a single assembly design. Assumptions of criticality
 and irradiation time should be made as well. The results
-could then be parsed into a csv file and stored for
+could then be parsed into a \gls{CSV} file and stored for
 the training of a new model. This will allow better
 prediction of the model for higher burnups and `fringe'
 burnup-enrichment assemblies.
 
 Methods used in this paper have the potential to be expanded into more
-complicated problems. For example, the method
-could be applied to \gls{MOX} fuel depletion, taking
-into account varying uranium and plutonium concentrations.
-However, a \gls{UDB} equivalent is not available
-for training a \gls{MOX} model, so a
-data-generating process, consisting of a high-fidelity
-depletion calculation of randomized \gls{MOX} fuel
-compositions within acceptable ranges of reactor
-criticality, similar to the process mentioned above,
-will have to take place. After the data
-is generated, the neural network model can be trained
-to predict \gls{MOX} depletion.
-
-Another interesting application of this method is for
+complicated problems. An interesting application of this method is for
 \gls{MSR} system optimization. Current work on
-\glspl{MSR} includes of optimizing non-core operating
+\glspl{MSR} include optimization non-core operating
 parameters such as reprocessing scheme and flow rate.
 Fuel transmutation calculations
 can be usually computationally burdensome for \gls{MSR}
@@ -40,7 +27,7 @@ very short (usually 3 days), which makes an
 \gls{MSR} lifetime simulation (if 60 years)
 require $\sim 7,300$ depletion calculations.
 The computational burden
-makes it impossible to perform brute-force methods,
+makes it impossible to use brute-force methods,
 such as grid search of all possible parameters.
 However, if a quick depletion calculation becomes possible
 with a well-trained prediction model, the

@@ -12,9 +12,9 @@ searching the database for assemblies
 with the closest burnup and enrichment (using Pandas)
 takes 21.8 seconds. Comparatively, 100 \gls{ORIGEN} calculations
 take 118 seconds. Using the model achieves 43,700\% reduction
-in time and does not require libraries, or reactor physics code.
+in time and does not require libraries, or a reactor physics code.
 The standalone model pickle file is only
-38 Kb, while the curated database (.csv) itself is 330 Mb.
+38 Kb, while the curated database (.csv) is 330 Mb.
 
 \subsection{Assembly Comparison}
 
@@ -103,8 +103,8 @@ isotopes in the assembly are in Table \ref{tab:avg_assem}.
         \hline
     \end{tabular}
     \caption{Isotopic concentration of the assembly with median burnup and
-             enrichment. This composition is used for the recipe method. 
-    \label{tab:avg_assem}}
+             enrichment. This composition is used for the recipe method.}
+    \label{tab:avg_assem}
 \end{table}
 
 
@@ -117,7 +117,7 @@ We compare the three composition predictions according to:
 
 The \gls{UDB} contains discharged assembly data
 from nuclear reactors in the United States up to May of
-2013. We added all the \gls{UNF} assemblies in the database,
+2013. We added all the \gls{UNF} assemblies in the database
 and evaluated the inventory as it was in 2013. 
 Table \ref{tab:met} shows the comparison of the inventories.
 
@@ -154,7 +154,7 @@ error between the full database, model prediction, and
 the mean recipe for
 major isotopes. For plutonium isotopes, the trained neural
 network model far
-outperforms the mean database.
+outperforms the mean database (Figure \ref{fig:pu_rel}).
 
 \begin{figure}
     \centering
@@ -189,7 +189,6 @@ recipe method.
 Unsurprisingly, the error increases as the actual burnup and enrichments
 diverge from the average.
 
-%! Regenerate plots
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{assem_dh.png}
@@ -273,15 +272,17 @@ in predicting waste metrics.
 \subsubsection{Assembly fissile quality}
 
 Fissile quality is frequently quantified in units of 
-$^{239}Pu$ equivalent, shown in figure \ref{tab:pu_equiv} \cite{anon_plutonium_1989}. This value is
+$^{239}Pu$ equivalent, shown in Table \ref{tab:pu_equiv} \cite{anon_plutonium_1989}. This value is
 calculated by aggregating the weighted fissile
 values of each isotope in a material. The $^{239}Pu$
 equivalent factors are different for fast neutron spectrum 
-and thermal neutron spectrum reactors \cite{baker_comparison_1963}.  
-For example, the equivalent fissile value for
-an \gls{LWR} will be calculated by:
+and thermal neutron spectrum reactors \cite{baker_comparison_1963}
+(factors shown in Table \ref{tab:pu_equiv}).  
+The equivalent fissile value is calculated by:
+\begin{gather}
+\text{Pu}_{\text{eq}} = \sum_i w_i m_i
+\end{gather}
 \begin{gather*}
-\text{Pu}_{\text{eq}} = \sum_i w_i m_i \\
 i \in [^{235}U, ^{238}Pu, ^{239}Pu, ^{240}Pu, ^{241}Pu, ^{242}Pu, ^{242}Am] \\
 w_i = \text{equivalent weighting factors} \\
 m_i = \text{mass of iso i} \\
@@ -361,10 +362,9 @@ enriched \gls{UOX} fuel to 70,000 MWd/MT.
 
 The user can also define time-varying
 cycle time and refueling time for the reactor model, as shown
-in figure \ref{fig:cyclus_time}.
+in Figure \ref{fig:cyclus_time}.
 
 
-%! Check this - shouldn't hte pu239 decrease
 %! it is plutonium in the fuel total
 \begin{figure}
     \centering
@@ -383,11 +383,11 @@ in figure \ref{fig:cyclus_time}.
 \end{figure}
 
 
-%! Not so interesting plot
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{./cyclus_imp/cycle_time.png}
-    \caption{Discharge and refueling cycles can be defined as an equation of time in this reactor archetype.}
+    \caption{Discharge and refueling cycles can be defined as an equation of time in this reactor archetype. Discharge burnup is scaled to take into account longer fuel residence time, and leads to increase in discharge fuel \textsuperscript{244}Cm composition.
+    }
     \label{fig:cyclus_time}
 \end{figure}
 

@@ -2,15 +2,15 @@
 
 We trained a neural network model
 to predict \gls{PWR} \gls{UNF} composition given initial enrichment
-and burnup, to implement a quick, flexible, medium-fidelity method to
-estimate depleted \gls{PWR} fuel assembly composition
+and burnup. This quick, flexible, medium-fidelity method to
+estimate depleted \gls{PWR} fuel assembly compositions is used
 to model scenarios in which the \gls{PWR} fuel burnup
 and enrichment vary over time.
 The \gls{UNF-STANDARDS} \gls{UDB} provided a ground truth on which
 the model trained.
 We validated the model by comparing the U.S. \gls{UNF} inventory profile
 predicted by the model with the \gls{UDB} \gls{UNF} inventory
-profile. The neural network yields less than 1\% error of
+profile. The neural network yields less than 1\% error for
 \gls{UNF} inventory decay heat and activity and less than
 2\% error for major isotopic inventory. The neural network model
 takes 0.27 seconds for 100 predictions, compared to
@@ -23,8 +23,8 @@ depletion calculations. This model also allows discharge of
 batches with assemblies of varying burnup.
 
 Since the original private data cannot be retrieved from the model,
-this trained model provides open-source depletion capabilities to \gls{NFC}
-simulators. This method of training an artificial neural network with a
+this trained model can provide open-source depletion capabilities to \gls{NFC}
+simulators. We show that training an artificial neural network with a
 dataset from a complex fuel depletion model
 can provide rapid, medium-fidelity depletion capabilities
 to large-scale fuel cycle simulations.
